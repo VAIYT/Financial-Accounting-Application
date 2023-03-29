@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-
+import styles from "../styles/defaultLayout.module.css";
+console.log(styles);
 export const Default = ({ children }) => {
   return (
     <div>
@@ -13,7 +14,7 @@ export const Default = ({ children }) => {
           </li>
         </ul>
       </header>
-      {children}
+      <div className={styles.container}>{children}</div>
     </div>
   );
 };
