@@ -15,7 +15,7 @@ export const App = () => {
   return (
     <Default>
       <Container gap={1}>
-        <Card css={{ shadow: "$md" }}>
+        <Card>
           <Card.Header>Добавить трату</Card.Header>
           <Card.Body>
             <Row>

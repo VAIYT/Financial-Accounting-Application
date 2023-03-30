@@ -1,2 +1,9 @@
 .container {
 }
+
+.list {
+    margin-top: 150px;
+}
+.list li {
+    margin-bottom: 34px;
+}
