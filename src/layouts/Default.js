@@ -10,7 +10,7 @@ export const Default = ({ children }) => {
   return (
     <Container className={styles.container}>
     <Row gap={4} css={{minWidth: '100%'}}>
-      <Col span>
+      <Col span css={{padding: '0'}}>
         <header className={styles.header}>
         <ul className={styles.list}>
           <li>
@@ -19,22 +19,27 @@ export const Default = ({ children }) => {
           <li>
             <Link to="/users">Users</Link>
           </li>
-          <li><Link>Для Организации</Link></li>
-          <li><Link>Profile</Link></li>
-          <li><Link>Profile</Link></li>
+          <li>
+            <Link to="/some">Для Организации</Link>
+          </li>
+          <li>
+            <Link to="/some2">Profile</Link>
+          </li>
+          <li>
+            <Link to= "/some3">Profile</Link>
+          </li>
         </ul>
       </header>
       </Col>
       <Col>
-      <Row justify='space-between' >
+      <Row justify='space-between' css={{marginTop: '6vh', paddingBottom: '2vh', paddingRight: '2vh'}}>
       <Text h2>Main Dashboard</Text>
         <Grid>
               <Card css={{borderRadius: '30px', padding: '4px'}}>
                   <Row css={{alignItems: 'center', }}>
                     <Col span={5}>
-                    <Input css={{borderRadius: 'sm'}}  placeholder="Search.." />
+                    <Input placeholder="Search.." />
                     </Col>
-                    
                     <Button.Group light auto>
                     <Button icon={<BellIcon fill="currentColor" filled/>}/>
                       <Button icon={<MoonIcon fill="currentColor" filled/>}/>
@@ -44,7 +49,7 @@ export const Default = ({ children }) => {
                     <Dropdown.Trigger>
                       <User 
                       size="md"
-                      as="button"
+                      
                       color="secondary" src={profileImage} 
                       pointer/>
                     </Dropdown.Trigger>
@@ -62,9 +67,8 @@ export const Default = ({ children }) => {
               </Card>
         </Grid>
         </Row>
-      <Card css={{minHeight: '90vh'}}>
+      <Card css={{minHeight: '84.5vh'}}>
         <Card.Header>
-          
         </Card.Header>
           <Card.Body>
             {children}
