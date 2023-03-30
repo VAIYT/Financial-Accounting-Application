@@ -17,14 +17,25 @@
     margin-top: 15vh;
 }
 
-button {
-    width: 24px;
-    height: 24px;
-}
+
 .list li {
     margin-bottom: 34px;
 }
 
-.layoutsInput {
-    border-radius: 49px;
+.input {
+    border-radius: 40px;
+    border: none;
+    background-color: #F4F7FE;
+    width: 100%;
+    padding: 8px;
+}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+button {
+    align-items: center;
+    background-color: white;
+    border: none;
 }
