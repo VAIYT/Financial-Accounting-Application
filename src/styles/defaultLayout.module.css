@@ -34,8 +34,16 @@ input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s eas
 input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
-button {
+/* button {
     align-items: center;
     background-color: white;
     border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 1vh;
 }
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+} */

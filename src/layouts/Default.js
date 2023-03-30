@@ -1,14 +1,14 @@
 import { Dropdown, Button, Card, Col, Container, Grid, Input, Row, Spacer, Text, User } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-// import { BellIcon } from "./icons/BellIcon";
+import { BellIcon } from "./icons/BellIcon";
 import styles from "../styles/defaultLayout.module.css";
 import profileImage from '../images/profile.jpg'
-// import { MoonIcon } from "./icons/MoonIcon";
-// import { ExclamationCircleIcon } from "./icons/ExclamationCircleIcon";
+import { MoonIcon } from "./icons/MoonIcon";
+import { ExclamationCircleIcon } from "./icons/ExclamationCircleIcon";
 // import { Notification } from "react-iconly";
-import BellIcon from "../images/BellIcon.svg"
-import MoonIcon from "../images/MoonIcon.svg"
-import ExclamationCircleIcon from "../images/ExclamationCircleIcon.svg"
+// import BellIcon from "../images/BellIcon.svg"
+// import MoonIcon from "../images/MoonIcon.svg"
+// import ExclamationCircleIcon from "../images/ExclamationCircleIcon.svg"
 export const Default = ({ children }) => {
   return (
     <Container className={styles.container}>
@@ -38,25 +38,27 @@ export const Default = ({ children }) => {
       <Row justify='space-between' css={{marginTop: '6vh', paddingBottom: '2vh', paddingRight: '2vh'}}>
       <Text h2>Main Dashboard</Text>
         <Grid>
-              <Card  css={{borderRadius: '30px'}}>
-                  <Row css={{alignItems: 'center', padding: '6px', marginLeft : '1.7vh' }} justify='space-between'>
+              <Card  css={{borderRadius: '30px'}} >
+                  <Row css={{alignItems: 'center', marginLeft : '0.7vh', padding:'$0'}} justify='space-between'>
                     <Col span={5}>
-                    <input placeholder="Search.." className={styles.input}/>
+                    {/* <input placeholder="Search.." className={styles.input}/>
+                     */}
+                    <Input placeholder="Search.." rounded/>
                     </Col>
-                    <button>
-                      <img src={BellIcon}></img>
-                    </button>
-                    <button>
-                      <img src={MoonIcon}></img>
-                    </button>
-                    <button>
-                      <img src={ExclamationCircleIcon}></img>
-                    </button>
-                    {/* <Button.Group light auto>
+                      {/* <button>
+                        <img src={BellIcon}></img>
+                      </button>
+                      <button>
+                        <img src={MoonIcon}></img>
+                      </button>
+                      <button>
+                        <img src={ExclamationCircleIcon}></img>
+                      </button> */}
+                    <Button.Group light auto animated={false} css={{marginTop: '$6'}}>
                     <Button icon={<BellIcon fill="currentColor" filled/>}/>
                       <Button icon={<MoonIcon fill="currentColor" filled/>}/>
                       <Button icon={<ExclamationCircleIcon fill="currentColor" filled/>}/>
-                    </Button.Group> */}
+                    </Button.Group>
                   <Dropdown placement="bottom-left">
                     <Dropdown.Trigger>
                       <User 
