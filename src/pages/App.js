@@ -1,4 +1,3 @@
-import "../App.css";
 import {
   Button,
   Card,
@@ -24,7 +23,7 @@ export const App = () => {
                 <Input width="100%" placeholder="Next UI" />
               </Col>
             </Row>
-            <Spacer/>
+            <Spacer />
             <Row>
               <Col span={2}>
                 <Input width="100%" placeholder="Next UI" />
