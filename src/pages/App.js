@@ -8,6 +8,7 @@ import {
   Input,
   Loading,
   Row,
+  Spacer,
 } from "@nextui-org/react";
 import { Default } from "../layouts/Default";
 
@@ -23,6 +24,7 @@ export const App = () => {
                 <Input width="100%" placeholder="Next UI" />
               </Col>
             </Row>
+            <Spacer/>
             <Row>
               <Col span={2}>
                 <Input width="100%" placeholder="Next UI" />

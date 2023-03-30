@@ -1,9 +1,24 @@
 .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F7FE;
+}
+
+.header {
+    width: 100%;
+
 }
 
 .list {
-    margin-top: 150px;
+    padding: 0;
+    margin: 0;
+    margin-top: 200px;
 }
+
+
+
 .list li {
     margin-bottom: 34px;
 }
