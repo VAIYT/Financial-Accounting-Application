@@ -1,5 +1,5 @@
 import { Default } from "../layouts/Default";
 
 export const Some = () => {
-    return <Default>asd</Default>
-}
+  return <Default>asd</Default>;
+};

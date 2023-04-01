@@ -28,7 +28,10 @@ export const App = () => {
   };
 
   useEffect(() => {
-    setSpending(JSON.parse(localStorage.getItem("spending")));
+    const newSpending = JSON.parse(localStorage.getItem("spending"));
+    if (newSpending) {
+      setSpending(newSpending);
+    }
   }, []);
 
   const handleSubmit = () => {
@@ -48,8 +51,13 @@ export const App = () => {
 
   return (
     <Default>
-      <Button onClick={() => setType("доход")}>Добавить доход</Button>
-      <Button onClick={() => setType("расход")}>Добавить расход</Button>
+      <Row>
+        <Col>
+          <Button onClick={() => setType("доход")}>Добавить доход</Button>
+          <Spacer />
+          <Button onClick={() => setType("расход")}>Добавить расход</Button>
+        </Col>
+      </Row>
       {type === "расход" ? (
         <Container gap={1}>
           <Card>
@@ -78,6 +86,7 @@ export const App = () => {
                   />
                 </Col>
               </Row>
+
               <Row>
                 <Col span={2} justify="center">
                   <Button onClick={handleSubmit}>Добавить</Button>
@@ -90,7 +99,7 @@ export const App = () => {
               <Col span={6} onClick={() => handleDeleteItem(item.title)}>
                 <Card>
                   <Card.Header>{item.title}</Card.Header>
-                  <Card.Body>Стоимость - {item.count}руб.</Card.Body>
+                  <Card.Body>Стоимость - {item.count} </Card.Body>
                 </Card>
               </Col>
             ))}
